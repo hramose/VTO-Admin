@@ -2,5 +2,9 @@
 
 return [
 	'edit' => 'Bearbeiten',
-	'destroy' => 'Löschen'
+	'destroy' => 'Löschen',
+	'export' => 'Exportieren nach..',
+	'headline' => 'Überschrift',
+	'info' => 'Information'
+
 ];
