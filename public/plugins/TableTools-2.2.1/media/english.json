@@ -1,0 +1,26 @@
+{
+    "sEmptyTable":      "No data exists in the table",
+    "sInfo":            "_START_ from _END_ to _TOTAL_ entries",{
+    "sEmptyTable":      "No data exists in the table",
+    "sInfo":            "_START_ to_END_ fromOTAL_ entries",
+    "sInfoEmpty":       "0 bis 0 von 0 Einträgen",
+    "sInfoFiltered":    "(filtered by _MAX_ entries)",
+    "sInfoPostFix":     "",
+    "sInfoThousands":   ".",
+    "sLengthMenu":      "_MENU_ View listing",
+    "sLoadingRecords":  "Loading...",
+	"sProcessing":      "Please wait...",
+    "sSearch":          "Search",
+	"sZeroRecords":     "No Result.",
+    "oPaginate": {
+        "sFirst":       "First",
+        "sPrevious":    "<<",
+        "sNext":        ">>",
+        "sLast":        "Last"
+    },
+    "oAria": {
+        "sSortAscending":  ": Enable to sort column in ascending order",
+        "sSortDescending": ": Enable to sort column descending"
+    }
+
+

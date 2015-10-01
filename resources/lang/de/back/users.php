@@ -1,0 +1,36 @@
+<?php
+
+return [
+	'dashboard' => 'Users gestion',
+	'users' => 'Benutzer',
+	'add' => 'Benutzer hinzufügen',
+	'all' => 'Alle',
+	'name' => 'Name',
+	'role' => 'Bezeichnung',		
+	'seen' => 'Gesehen',
+	'see' => 'Ansehen',
+	'edit' => 'Bearbeiten',
+	'destroy' => 'Löschen',
+	'destroy-warning' => 'Wirklich diesen Benutzer löschen ?',
+	'fail' => 'Update Fehler.',
+	'creation' => 'Erstellung',
+	'Users' => 'Benutzer',	
+	'email' => 'Email',
+	'password' => 'Passwort',
+	'confirm-password' => 'Bestätige Passwort',
+	'edition' => 'Bearbeiten',
+	'card' => 'Profil',
+	'created' => 'Benutzer erstellen.',
+	'updated' => 'Benutzer aktualisiert.',
+	'destroyed' => 'User destroyed.',
+	'confirmed' => 'Bestätigt',
+	'not-confirmed' => 'Nicht bestätigt',
+	'adminstatus' => 'Administrator',
+	'redakstatus' => 'Redakteur',
+	'userstatus' => 'Benutzer',
+	'gueststatus' => 'Gast',
+	'chooseimg' => 'Bild auswählen',
+	'chooseimgheader' => 'Bild',
+	
+
+];

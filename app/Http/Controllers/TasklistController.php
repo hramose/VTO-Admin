@@ -1,0 +1,72 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Tasklist;
+use App\Http\Requests;
+use App\Http\Controllers\Controller;
+use Request;
+
+class TasklistController extends Controller {
+
+    public function index() {
+
+        $tasklists = Tasklist::paginate(7);
+        return view('back.tasklist.index', compact('tasklists'));
+    }
+
+    public function create() {
+
+        return view('back.tasklist.create');
+    }
+
+    public function store(Requests\TasklistRequest $request) {
+
+
+        Tasklist::create($request->all());
+        
+        \Session::flash('flash_message','Task wurde übernommen!');
+
+        return redirect('tasklist');
+    }
+
+    public function edit($id) {
+
+
+        $tasklists = Tasklist::findOrFail($id);
+
+        return view('back.tasklist.edit', compact('tasklists'));
+    }
+
+    public function update($id, Requests\TasklistRequest $request) {
+
+        $tasklists = Tasklist::findOrFail($id);
+
+        $tasklists->update($request->all());
+        \Session::flash('flash_message','Task wurde geändert!');
+        return redirect('tasklist');
+    }
+
+    public function delete($id) {
+
+        Tasklist::find($id)->delete();
+        return redirect('tasklist');
+    }
+
+
+    
+public function json_tasklist_all() {
+
+         $tasklists = Tasklist::all();
+         return View('back.tasklist.json', compact('tasklists'));
+    }
+
+
+    public function search() {
+
+        $headline = Request::input('headline');
+
+        return View('back.tasklist.search')->with('tasklists', Tasklist::where('headline', 'like', '%' . $headline . '%')->paginate(7));
+    }
+
+}

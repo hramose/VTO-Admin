@@ -1,0 +1,81 @@
+
+/*li dot killer*/
+     .alert-danger 
+    {  
+    list-style-type: none;
+    padding-right: 20px;
+    margin-left: -0px;
+    color:#fed51c;
+    }
+
+ /*menu table*/
+    #navlist li
+    {
+    display: inline;
+    list-style-type: none;
+    padding-right: 20px;
+    margin-left: -0px;
+    }
+     /*searchfield table*/
+    .dataTables_filter
+    {
+    margin-top: -35px;     
+    }
+     /*icons big in white*/
+     .icon-success {
+    color: #ffffff;
+}
+/*hidden fields*/
+.hpet
+{
+  display: none; 
+}
+/*Front Footer bottom*/
+#footerfront {
+    position:absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    height: 50px;
+       background: #fff none repeat scroll 0 0;
+    border-top: 1px solid #d2d6de;
+    color: #444;
+    padding: 15px;
+}
+/*body background grey*/
+body 
+{
+    background-color:#ECF0F5!important;
+}
+/*big form lg 12 white background*/
+div.box.box-primary div.col-lg-12
+{
+    background-color:#ffffff!important;
+}
+
+/*badge design*/
+ .badge {
+    padding: 1px 8px 1px;
+    background-color: #aaa !important;
+  }
+/*table header dark*/
+  .blacktr
+  {
+    
+    background-color: #222D32 !important;
+    color: #ffffff;
+  }
+/*delete button design*/
+  .deletedesignkiller input.btn.btn-danger.btn-block
+  {    
+   font-size: 12px;
+    line-height: 1.5;
+    padding: 5px 10px;
+    width: 50%;
+  }
+
+/*old table shadow box*/
+  .panel {   
+    border: 0px solid transparent!important;  
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.05)!important;
+}

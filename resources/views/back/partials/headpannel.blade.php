@@ -1,0 +1,1 @@
+ <span class="label label-danger">{{ $nbr['new'] }}</span>
