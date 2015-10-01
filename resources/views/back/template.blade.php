@@ -18,7 +18,11 @@
           <title>VTO - Admin</title>
           <meta name="description" content="">
           <meta name="viewport" content="width=device-width, initial-scale=1">
-         
+
+           <!-- jQuery 2.1.4 -->
+            <!--<script src="{{ asset('/plugins/jQuery/jQuery-2.1.4.min.js') }}"></script>-->
+            <script src="{{ asset('/plugins/jQuery/jQuery-1.9.1.min.js') }}" type="text/javascript"></script>
+
           <!--[if (lt IE 9) & (!IEMobile)]>
           {!! HTML::script('js/vendor/respond.min.js') !!}
           <![endif]-->
@@ -115,11 +119,11 @@
                     <li class="treeview" id="tasklist">
                       <a href="#">
                       <i class="fa fa-list"></i>
-                       <span>{{ trans('back/admin.tasklist-comments') }}</span> <i class="fa fa-angle-left pull-right"></i>
+                       <span>{{ trans('back/tasklist.tasklist-comments') }}</span> <i class="fa fa-angle-left pull-right"></i>
                       </a>
                       <ul class="treeview-menu">
-                        <li id="tasklistall" class="active" ><a  href="{!! url('tasklist') !!}">{{ trans('back/admin.tasklistname') }}</a></li>
-                        <li  id="tasklistadd" ><a href="{!! url('tasklist/create') !!}">{{ trans('back/admin.tasklist-add') }}</a></li>
+                        <li id="tasklistall" class="active" ><a  href="{!! url('tasklist') !!}">{{ trans('back/tasklist.tasklistname') }}</a></li>
+                        <li  id="tasklistadd" ><a href="{!! url('tasklist/create') !!}">{{ trans('back/tasklist.tasklist-add') }}</a></li>
                         </li>
                       </ul>
                       <!--USER START--> 
@@ -165,11 +169,11 @@
                     <li class="treeview" id="tasklist">
                       <a href="#">
                       <i class="fa fa-list"></i>
-                       <span>{{ trans('back/admin.tasklist-comments') }}</span> <i class="fa fa-angle-left pull-right"></i>
+                       <span>{{ trans('back/tasklist.tasklist-comments') }}</span> <i class="fa fa-angle-left pull-right"></i>
                       </a>
                       <ul class="treeview-menu">
-                        <li id="tasklistall" class="active" ><a  href="{!! url('tasklist') !!}">{{ trans('back/admin.tasklistname') }}</a></li>
-                        <li  id="tasklistadd" ><a href="{!! url('tasklist/create') !!}">{{ trans('back/admin.tasklist-add') }}</a></li>
+                        <li id="tasklistall" class="active" ><a  href="{!! url('tasklist') !!}">{{ trans('back/tasklist.tasklistname') }}</a></li>
+                        <li  id="tasklistadd" ><a href="{!! url('tasklist/create') !!}">{{ trans('back/tasklist.tasklist-add') }}</a></li>
                         </li>
                       </ul>
 
@@ -200,10 +204,10 @@
                     <li class="treeview" id="tasklist">
                       <a href="#">
                       <i class="fa fa-list"></i>
-                       <span>{{ trans('back/admin.tasklist-comments') }}</span> <i class="fa fa-angle-left pull-right"></i>
+                       <span>{{ trans('back/tasklist.tasklist-comments') }}</span> <i class="fa fa-angle-left pull-right"></i>
                       </a>
                       <ul class="treeview-menu">
-                        <li id="tasklistall" class="active" ><a  href="{!! url('tasklist') !!}">{{ trans('back/admin.tasklistname') }}</a></li>
+                        <li id="tasklistall" class="active" ><a  href="{!! url('tasklist') !!}">{{ trans('back/tasklist.tasklistname') }}</a></li>
                         <!--<li  id="tasklistadd" ><a href="{!! url('tasklist/create') !!}">{{ trans('back/admin.tasklist-add') }}</a></li>-->
                         </li>
                       </ul>
@@ -299,8 +303,7 @@
                 immediately after the control sidebar -->
               <div class="control-sidebar-bg"></div>
               </div><!-- ./wrapper -->
-              <!-- jQuery 2.1.4 -->
-              <!--<script src="{{ asset('/plugins/jQuery/jQuery-2.1.4.min.js') }}"></script>-->
+
               <!-- Bootstrap 3.3.5 -->
               <script src="{{ asset('/js/bootstrap.min.js') }}" type="text/javascript"></script>
               <!-- Slimscroll -->

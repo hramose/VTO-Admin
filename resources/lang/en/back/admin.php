@@ -22,15 +22,6 @@ return [
 	'new-registers' => 'New users !',
 	'new-posts' => 'New posts !',
 	'new-comments' => 'New comments !',
-	'tasklist' => 'Neue Tasks',
-	'tasklistakt' => 'Update task',
-	'tasklist-comments' => 'Tasks',
-	'tasklist-comment' => 'Task',
-	'tasklistname' => 'Tasklist',
-	'tasklist-add' => 'Add Task ',
-	'tasklist-edit' => 'Edit Task ',
-	'tasklist-take' => 'Take Task ',	
-	'tasklist-addadd' => 'creation',
 	'table-lang' => 'english'
 
 ];

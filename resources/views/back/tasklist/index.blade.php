@@ -1,8 +1,9 @@
 @extends('back.template')
 @section('main')
 <!--Breadcrumb-->
-@include('back.partials.entete', ['title' => trans('back/admin.tasklistname'), 'icone' => 'pencil', 'fil' => trans('back/admin.tasklistname')])
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+@include('back.partials.entete', ['title' => trans('back/tasklist.tasklistname'), 'icone' => 'pencil', 'fil' => trans('back/tasklist.tasklistname')])
+
+
 <!--MENÜ-->
 <script>
    $(function() {     
@@ -15,9 +16,13 @@
    });
 </script>
 
+ 
+  
+
 <!-- DataTables Script-->
 <script src="{{ URL::asset('plugins/datatables/jquery.dataTables.min.js') }}"></script>
 <script src="{{ URL::asset('plugins/datatables/dataTables.bootstrap.min.js') }}"></script> 
+ <link rel="stylesheet" href="{{ URL::asset('https://cdn.datatables.net/1.10.9/css/dataTables.bootstrap.min.css') }}">
 
 
 <!--EXPORT TABLE SCRIPTS-->
@@ -34,6 +39,10 @@
 <script src="{{ URL::asset('plugins/FooTable-master/js/footable.js') }}" type="text/javascript"></script>
 <script src="{{ URL::asset('plugins/FooTable-master/js/footable.sortable.js') }}" type="text/javascript"></script> 
 
+    @if(session('statut') == 'admin' || session('statut') == 'redac' ||  session('statut') == 'user')
+    <!--admin oder redac-->
+
+  
 
 
 <!--Language Switch-->  
@@ -50,7 +59,15 @@
     $clipboard="Clipboard";
    }
    ?>
-
+<!--Table Data Switch-->
+@if(session('statut') == 'admin')
+<?php $tablesorter_status="tablesorter_tasklist_json";?>
+@elseif(session('statut') == 'redac')
+<?php $tablesorter_status="tablesorter_tasklist_json";?>
+@elseif(session('statut') == 'user')
+<?php $tablesorter_status="tablesorter_tasklist_json_disabled";?>
+@elseif(session('statut') == 'guest')
+@endif 
 
 
 
@@ -60,11 +77,24 @@
    $(document).ready(function() {
       $('#multitable').DataTable( {
 
+         "bSortable" : false,
+    "aTargets" : [ "no-sort" ],
+
+        "aoColumnDefs" : [ {
+            'bSortable' : false,
+            'aTargets' : [ 4,3 ]
+        } ],
+         "order": [[ 0, "desc" ]],
+
      "language": {
     "url": "{{URL::asset('plugins/TableTools-2.2.1/media') }}/{!! $languagetable !!}"
   },
 
-       "ajax": "{{ URL::to('tablesorter_tasklist_json') }}"
+
+
+
+
+     "ajax": "{{ URL::to($tablesorter_status) }}"
    } );
    } );
 </script>
@@ -74,6 +104,7 @@
    
    });
 </script>
+
 
 
 
@@ -114,7 +145,7 @@
          </th>
          <th  data-type="numeric">
          </th>
-         <th >
+         <th id="vh">
          </th>
       </tr>
    </thead>
@@ -135,6 +166,19 @@
 
 <!-- page script --> 
 <!-- DataTables script and style-->
-<link rel="stylesheet" href="{{ URL::asset('plugins/TableTools-2.2.1/css/dataTables.tableTools.css') }}">
+
 </div>
+
+
+
+
+
+
+
+
+
+  @else
+    OUT OF HERE!! Secure!!
+    @endif
+
 @stop

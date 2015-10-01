@@ -16,11 +16,7 @@
     padding-right: 20px;
     margin-left: -0px;
     }
-     /*searchfield table*/
-    .dataTables_filter
-    {
-    margin-top: -35px;     
-    }
+    
      /*icons big in white*/
      .icon-success {
     color: #ffffff;
@@ -79,3 +75,23 @@ div.box.box-primary div.col-lg-12
     border: 0px solid transparent!important;  
     box-shadow: 0 0px 0px rgba(0, 0, 0, 0.05)!important;
 }
+
+/*Export Button*/
+button.btn.btn-warning.btn-sm.dropdown-toggle {   
+background-color: #3c8dbc !important;
+margin-bottom: 20px;
+padding: 7px;
+border: none;
+}
+
+
+
+.footable-nav{   
+background-color: #3c8dbc !important;
+margin-bottom: 20px;
+}
+
+
+
+
+

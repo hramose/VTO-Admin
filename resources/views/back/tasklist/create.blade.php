@@ -17,7 +17,7 @@ $(function() {
 
 
 <!--Breadcrumb -->
-@include('back.partials.entete', ['title' => trans('back/admin.tasklistname'), 'icone' => 'pencil', 'fil' => link_to('tasklist', trans('back/admin.tasklistname')) . ' / ' . trans('back/blog.creation')])
+@include('back.partials.entete', ['title' => trans('back/tasklist.tasklistname'), 'icone' => 'pencil', 'fil' => link_to('tasklist', trans('back/tasklist.tasklistname')) . ' / ' . trans('back/blog.creation')])
 
 
 
@@ -49,13 +49,13 @@ $(function() {
                 <form role="form">
                   <div class="box-body">
                     <div class="form-group">
-                      <label for="exampleInputEmail1">Headline</label>
+                      <label for="exampleInputEmail1">{{(trans('back/tasklist.headline'))}}</label>
                        {!! Form::control('text', 0, 'headline',  $errors) !!}                      
 
                         <!--{!! Form::control('text', 0, 'headline',  $errors, trans('back/blog.content')) !!}-->
                     </div>
                     <div class="form-group">
-                      <label for="exampleInputPassword1">Info</label>
+                      <label for="exampleInputPassword1">{{(trans('back/tasklist.info'))}}</label>
                    {!! Form::select('info', array('Sehr dringend' => 'Sehr dringend', 'Dringend' => 'Dringend','Weniger dringend' => 'Weniger dringend', 'Nicht wichtig' => 'Nicht wichtig'), null ,array('class'=>'form-control','style'=>'' )) !!}
                  
 
@@ -65,8 +65,8 @@ $(function() {
 
                   </div><!-- /.box-body -->
 
-                  <div class="box-footer">
-                     {!! Form::submit('Task erstellen') !!}
+                  <div class="box-footer">                     
+                      {!! Form::submit(trans('back/tasklist.tasklist-add')) !!}
                     
                   </div>
                 </form>

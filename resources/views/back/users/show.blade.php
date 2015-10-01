@@ -10,6 +10,8 @@
 	<p>{{ trans('back/users.email') . ' : ' .  $user->email }}</p>
 	<p>{{ trans('back/users.role') . ' : ' .  $user->role->title }}</p>
 	<p>{{ $user->confirmed ? trans('back/users.confirmed') : trans('back/users.not-confirmed') }}</p>
+	<p> <img src="{{ asset('')}}/{{ auth()->user()->imagepath }}/{{ auth()->user()->imagefilename }}" class="img-circle" alt="User Image" height="50">
+                     </p>
 	</div>
 		</div>
 

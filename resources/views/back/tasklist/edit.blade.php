@@ -13,7 +13,7 @@ $(function() {
 </script>
 
 <!--Breadcrumb -->
-@include('back.partials.entete', ['title' => trans('back/admin.tasklistname'), 'icone' => 'pencil', 'fil' => link_to('tasklist', trans('back/admin.tasklistname')) . ' / ' . trans('back/admin.tasklistakt')])
+@include('back.partials.entete', ['title' => trans('back/tasklist.tasklistname'), 'icone' => 'pencil', 'fil' => link_to('tasklist', trans('back/tasklist.tasklistname')) . ' / ' . trans('back/tasklist.tasklistakt')])
 
 
 <!-- Errors
@@ -41,13 +41,13 @@ $(function() {
                 <form role="form">
                   <div class="box-body">
                     <div class="form-group">
-                     <label for="exampleInputEmail1">Headline</label>
+                     <label for="exampleInputEmail1">{{(trans('back/tasklist.headline'))}}</label>
                      
                      {!! Form::control('text', 0, 'headline',  $errors) !!} 
                     </div>
                     <div class="form-group">
-                      <label for="exampleInputPassword1">Info</label>
-                      {!! Form::select('info', ['Sehr dringend' => 'Sehr dringend', 'Dringend' => 'Dringend','Weniger dringend' => 'Weniger dringend', 'Nicht wichtig' => 'Nicht wichtig'], null, ['class' => 'form-control']) !!}
+                      <label for="exampleInputPassword1">{{(trans('back/tasklist.info'))}}</label>
+                      {!! Form::select('info', ['Sehr dringend' => 'Sehr dringend', 'Dringend' => 'Dringend','Weniger dringend' => 'Weniger dringend', 'Nicht wichtig' => 'Nicht wichtig', 'Erledigt' => 'Erledigt'], null, ['class' => 'form-control']) !!}
  
                     </div>
                    
@@ -56,7 +56,7 @@ $(function() {
                   </div><!-- /.box-body -->
 
                   <div class="box-footer">
-                     {!! Form::submit(trans('back/admin.tasklist-take')) !!}
+                     {!! Form::submit(trans('back/tasklist.tasklist-take')) !!}
                   
                   </div>
                 </form>

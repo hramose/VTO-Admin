@@ -61,6 +61,12 @@ public function json_tasklist_all() {
          return View('back.tasklist.json', compact('tasklists'));
     }
 
+public function json_disabled() {
+
+         $tasklists = Tasklist::all();
+         return View('back.tasklist.json_disabled', compact('tasklists'));
+    }    
+
 
     public function search() {
 

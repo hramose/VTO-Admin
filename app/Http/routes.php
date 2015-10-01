@@ -5,6 +5,7 @@ Route::get('/', [
 	'uses' => 'HomeController@index', 
 	'as' => 'home'
 ]);
+
 Route::get('language', 'HomeController@language');
 
 
@@ -74,4 +75,5 @@ T Tasklist Routes
 Route::resource('tasklist', 'TasklistController');
 Route::get('tasklist/{id}/delete', 'TasklistController@delete');
 Route::get('tablesorter_tasklist_json', 'TasklistController@json_tasklist_all');
+Route::get('tablesorter_tasklist_json_disabled', 'TasklistController@json_disabled');
 //Route::post('tasklist/search', 'TasklistController@search');

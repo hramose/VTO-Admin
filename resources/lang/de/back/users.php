@@ -22,7 +22,7 @@ return [
 	'card' => 'Profil',
 	'created' => 'Benutzer erstellen.',
 	'updated' => 'Benutzer aktualisiert.',
-	'destroyed' => 'User destroyed.',
+	'destroyed' => 'Benutzer gelöscht.',
 	'confirmed' => 'Bestätigt',
 	'not-confirmed' => 'Nicht bestätigt',
 	'adminstatus' => 'Administrator',

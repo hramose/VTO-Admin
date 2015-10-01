@@ -20,15 +20,6 @@ return [
 	'new-messages' => 'Neue Beträge',
 	'new-registers' => 'Neuer Benutzer',
 	'new-posts' => 'Neue Beträge!',
-	'new-comments' => 'Neue Kommentare',
-	'tasklist' => 'Neue Aufgabe',
-	'tasklist-comments' => 'Aufgaben',
-	'tasklist-comment' => 'Aufgabe',
-	'tasklistname' => 'Aufgabenliste',
-	'tasklistakt' => 'Aufgabenliste aktualisieren',
-	'tasklist-add' => 'Aufgabe erstellen ',
-	'tasklist-edit' => 'Aufgabe bearbeiten ',
-	'tasklist-take' => 'Aufgabe übernehmen',
-	'tasklist-addadd' => 'Erstellung',
+	'new-comments' => 'Neue Kommentare',	
 	'table-lang' => 'german'
 ];

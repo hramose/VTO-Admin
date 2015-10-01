@@ -30,7 +30,7 @@
                     </a>
                     <ul class="dropdown-menu">
                     
-                        <li class="header">{{ isset($taskcountkey) ? $taskcountkey : 'taskcountkey Fehler!' }} {{ trans('back/admin.tasklist-comments') }}
+                        <li class="header">{{ isset($taskcountkey) ? $taskcountkey : 'taskcountkey Fehler!' }} {{ trans('back/tasklist.tasklist-comments') }}
 <?php  Session::regenerate(); ?>
                         
                         </li>
@@ -52,7 +52,7 @@
                                    <br>
 @foreach ($tasklisttkey as $v)
 <?php $testtt="$v->id"; ?>
-<p>&nbsp;&nbsp;{{ trans('back/admin.tasklist-comment') }}: <a href="{{ URL::to('tasklist')}}/<?php echo $testtt ?>/edit">{{ $v->headline }}</a></p><hr>
+<p>&nbsp;&nbsp;{{ trans('back/tasklist.tasklist-comment') }}: <a href="{{ URL::to('tasklist')}}/<?php echo $testtt ?>/edit">{{ $v->headline }}</a></p><hr>
 @endforeach
 
                                 </li><!-- end message -->
