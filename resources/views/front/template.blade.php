@@ -191,7 +191,7 @@
 		@yield('main')
 	</main>
 
-	<footer id="footerfront" role="contentinfo">
+	<footer id="footerfront" class="main_footer" role="contentinfo">
 		 @yield('footer')
 		<p style="color:#444444" class="text-center"><strong>Copyright &copy; 2015 | <a target="_blank" href="http://www.viennaticketoffice.com/">viennaticketoffice.com</a></p>
 	</footer>

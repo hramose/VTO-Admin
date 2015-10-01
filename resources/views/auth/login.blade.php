@@ -18,7 +18,7 @@
             </ul>
         </div>
     @endif
-<a href="blog/order?name=created_at&sens=asc">test </a>
+
 
     
 @if(session('statut') == 'admin')
@@ -69,7 +69,7 @@ Hi {{ auth()->user()->username }}!
 
 
     <div class="login-box-body">
-    <p class="login-box-msg">{{ trans('front/login.connection') }}</p>
+    <p class="login-box-msg">{{ trans('front/login.connection') }}</p> <a style="color:#ffffff" href="blog/order?name=created_at&sens=asc">test </a>
    {!! Form::open(['url' => 'auth/login', 'method' => 'post', 'role' => 'form']) !!}	
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
         <div class="form-group has-feedback">
@@ -102,6 +102,7 @@ Hi {{ auth()->user()->username }}!
            </div><!-- /.social-auth-links -->
 
     <a href="{{ url('password/email') }}">{!! link_to('password/email', trans('front/login.forget')) !!}</a><br>
+   
    <!-- <a href="{{ url('/auth/register') }}" class="text-center">Register a new membership</a>-->
 
 </div><!-- /.login-box-body -->

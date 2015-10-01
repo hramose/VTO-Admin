@@ -37,6 +37,10 @@
     border-top: 1px solid #d2d6de;
     color: #444;
     padding: 15px;
+      background: #fff none repeat scroll 0 0;
+    border-top: 1px solid #d2d6de;
+    color: #444;
+    padding: 15px;
 }
 /*body background grey*/
 body 
