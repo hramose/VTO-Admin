@@ -6,6 +6,7 @@ Route::get('/', [
 	'as' => 'home'
 ]);
 
+
 Route::get('language', 'HomeController@language');
 
 
@@ -15,6 +16,10 @@ Route::get('admin', [
 	'as' => 'admin',
 	'middleware' => 'admin'
 ]);
+
+//Secure Radac and User
+Route::resource('ru', 'RuController@index');
+
 
 Route::get('medias', [
 	'uses' => 'AdminController@filemanager',

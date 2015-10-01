@@ -131,6 +131,11 @@
       <li><a href="#" onClick ="$('#multitable').tableExport({type:'pdf',pdfFontSize:'7',escape:'false'});"> <img src='{{ URL::asset('plugins/tableExport/icons/pdf.png') }}' width='24px'> PDF</a></li>
    </ul>
 </div>
+
+<div class="box box-primary">
+  <div class="col-lg-12">
+<br>
+
 <table data-filter="#filterx" id="multitable" class="display footable table-bordered table-striped" data-filter="#filter" data-page-size="5" cellspacing="0" width="100%">
    <thead>
       <tr>
@@ -160,6 +165,8 @@
 </table>
 
 
+</div>
+</div>
 
 
 <!-- Main content -->

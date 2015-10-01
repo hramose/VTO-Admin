@@ -165,6 +165,16 @@
 
                      @elseif(session('statut') == 'redac')
 
+                      <!--RU DASHBOARD START--> 
+                    <li   >
+                      <li id="rudashboard" {!! classActivePath('admin')!!}>                      
+                      <a href="{!! url('ru') !!}">
+                      <i class="fa fa-fw fa-dashboard"></i>
+                      <span>{{ trans('back/admin.dashboard') }}</span>
+                      </a>
+                    </li>
+
+
                           <!--TASKLIST START--> 
                     <li class="treeview" id="tasklist">
                       <a href="#">
@@ -199,6 +209,16 @@
 
 
                   @elseif(session('statut') == 'user')
+
+                        <!--RU DASHBOARD START--> 
+                    <li   >
+                      <li id="rudashboard" {!! classActivePath('admin')!!}>                      
+                      <a href="{!! url('ru') !!}">
+                      <i class="fa fa-fw fa-dashboard"></i>
+                      <span>{{ trans('back/admin.dashboard') }}</span>
+                      </a>
+                    </li>
+                    
 
                        <!--TASKLIST START--> 
                     <li class="treeview" id="tasklist">
@@ -252,11 +272,9 @@
               <!-- Main Footer -->
               <footer class="main-footer">
               <!-- To the right -->
-              <div class="pull-right hidden-xs">
-              <a href="https://github.com/Irocode"></a>VTO <span style="color:#222T32"><b>Admin</b></span> </a>. A Laravel 5 Admin Tool.
-              </div>
+           
               <!-- Default to the left -->
-              <strong>Copyright &copy; 2015 | <a target="_blank" href="http://www.viennaticketoffice.com/">viennaticketoffice.com</a> | </strong> Created by <a href="https://github.com/Irocode">Bernd Obendorfer</a> | See code at <a href="https://github.com/Irocode">Github</a>
+              <strong>Copyright &copy; 2015 | <a target="_blank" href="http://www.viennaticketoffice.com/">viennaticketoffice.com</a></strong>
               </footer>
               <!-- Control Sidebar -->
               <aside class="control-sidebar control-sidebar-dark">

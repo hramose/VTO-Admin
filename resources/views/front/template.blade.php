@@ -116,11 +116,11 @@
 									</li>
 								@elseif(session('statut') == 'redac') 
 									<li style="background: #D73925; width: auto;  border: 1px solid #ffffff">
-										{!! link_to('tasklist', trans('front/site.redaction')) !!}
+										{!! link_to('ru', trans('front/site.redaction')) !!}
 									</li>
 									@elseif(session('statut') == 'user') 
 									<li style="background: #D73925; width: auto;  border: 1px solid #ffffff">
-										{!! link_to('tasklist', trans('front/site.user')) !!}
+										{!! link_to('ru', trans('front/site.user')) !!}
 									</li>
 								@endif
 								<li>
