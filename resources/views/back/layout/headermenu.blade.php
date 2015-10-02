@@ -48,17 +48,17 @@
                                       
       
                                         <!-- The message -->
-                                       
-                                   <br>
+                                 
+                                 
 @foreach ($tasklisttkey as $v)
 <?php $testtt="$v->id"; ?>
-<p>&nbsp;&nbsp;{{ trans('back/tasklist.tasklist-comment') }}: <a href="{{ URL::to('tasklist')}}/<?php echo $testtt ?>/edit">{{ $v->headline }}</a></p><hr>
+<p>&nbsp;&nbsp; <a href="{{ URL::to('tasklist')}}/<?php echo $testtt ?>/edit">{{ $v->headline }}</a></p><hr>
 @endforeach
 
                                 </li><!-- end message -->
                             </ul><!-- /.menu -->
                         </li>
-                        <li class="footer"><a href="tasklist"><br></a></li>
+                        
                     </ul>
                 </li><!-- /.messages-menu -->
 

@@ -88,11 +88,32 @@ padding: 7px;
 border: none;
 }
 
-
+/*Footer Front*/
 
 .footable-nav{   
 background-color: #3c8dbc !important;
 margin-bottom: 20px;
+}
+
+
+/*Drop Down Menu Back*/
+ul.dropdown-menu li.header{   
+background-color: #1e282c !important;
+color:white!important;
+}
+.dropdown-menu{   
+background-color: #222d32 !important;
+color:white!important;
+}
+
+ul.dropdown-menu li.footer{   
+background-color: #222d32 !important;
+color:white!important;
+}
+
+ul.dropdown-menu li div.slimScrollDiv ul.menu li p a{   
+color: #ffffff !important;
+
 }
 
 
