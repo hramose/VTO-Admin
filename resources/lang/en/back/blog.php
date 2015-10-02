@@ -1,7 +1,7 @@
 <?php
 
 return [
-	'dashboard' => 'Posts gestion',
+	'dashboard' => 'News gestion',
 	'creation' => 'Creation',
 	'published' => 'Published',
 	'title' => 'Title',
@@ -11,7 +11,7 @@ return [
 	'tags' => 'Tags',
 	'edition' => 'Edition',
 	'add' => 'Add a post',
-	'posts' => 'Posts',
+	'posts' => 'News',
 	'date' => 'Date',
 	'author' => 'Author',
 	'seen' => 'Seen',

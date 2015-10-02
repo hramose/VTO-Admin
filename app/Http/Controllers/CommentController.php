@@ -25,7 +25,9 @@ class CommentController extends Controller {
 	{
 		$this->comment_gestion = $comment_gestion;
 
-		$this->middleware('admin', ['except' => ['store', 'edit', 'update', 'destroy']]);
+		//$this->middleware('admin', ['except' => ['store', 'edit', 'update', 'destroy']]);
+		$this->middleware('redac', ['except' => ['store', 'edit', 'update', 'destroy']]);
+		
 		$this->middleware('auth', ['only' => ['store', 'update', 'destroy']]);
 		$this->middleware('ajax', ['only' => ['updateSeen', 'update', 'valid']]);
 	}

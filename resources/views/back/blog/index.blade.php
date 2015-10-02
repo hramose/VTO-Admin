@@ -51,13 +51,14 @@
                 <span class="fa fa-fw fa-{{ $order->name == 'created_at' ? $order->sens : 'unsorted'}}"></span>
               </a>
             </th>
+            @if(session('statut') == 'admin' || session('statut') == 'redac')
             <th>
               {{ trans('back/blog.published') }}
               <a href="#" name="active" class="order">
                 <span class="fa fa-fw fa-{{ $order->name == 'active' ? $order->sens : 'unsorted'}}"></span>
               </a>
             </th> 
-            @if(session('statut') == 'admin')
+            
               <th>
                 {{ trans('back/blog.author') }}
                 <a href="#" name="username" class="order">

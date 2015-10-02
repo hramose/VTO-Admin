@@ -136,7 +136,7 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
-      
+      	Barryvdh\Debugbar\ServiceProvider::class,
 
 		/*
 		 * Application Service Providers...
@@ -149,6 +149,7 @@ return [
 		Bestmomo\Filemanager\FilemanagerServiceProvider::class,
 		Acacha\AdminLTETemplateLaravel\app\Providers\AdminLTETemplateServiceProvider::class,
 		 Intervention\Image\ImageServiceProvider::class,
+		
 	],
 
 	/*
@@ -199,7 +200,7 @@ return [
 		'Form'		=> Collective\Html\FormFacade::class,
 		'HTML'		=> Collective\Html\HtmlFacade::class,
 		'Image'     => Intervention\Image\Facades\Image::class,
-		
+		'Debugbar' => Barryvdh\Debugbar\Facade::class,
         
 	],
 

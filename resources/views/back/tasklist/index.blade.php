@@ -1,5 +1,10 @@
 @extends('back.template')
 @section('main')
+<!--permissions admin oder redac-->
+@if(session('statut') == 'admin' || session('statut') == 'redac' ||  session('statut') == 'user')
+
+
+
 <!--Breadcrumb-->
 @include('back.partials.entete', ['title' => trans('back/tasklist.tasklistname'), 'icone' => 'pencil', 'fil' => trans('back/tasklist.tasklistname')])
 
@@ -39,25 +44,16 @@
 <script src="{{ URL::asset('plugins/FooTable-master/js/footable.js') }}" type="text/javascript"></script>
 <script src="{{ URL::asset('plugins/FooTable-master/js/footable.sortable.js') }}" type="text/javascript"></script> 
 
-    @if(session('statut') == 'admin' || session('statut') == 'redac' ||  session('statut') == 'user')
-    <!--admin oder redac-->
 
   
 
 
 <!--Language Switch-->  
+
 <div style="color:white; font-size:1px">{{ $language= trans('back/admin.table-lang')  }}</div>
 <?php 
-   $languagetable="/$language.json";
-   
-   if ($language==="german") {
-    $print="Drucken";
-    $clipboard="Zwischenspeichern";
-   
-    } else {
-    $print="Print";
-    $clipboard="Clipboard";
-   }
+   $languagetable="/$language.json";   
+
    ?>
 <!--Table Data Switch-->
 @if(session('statut') == 'admin')
@@ -178,14 +174,9 @@
 
 
 
-
-
-
-
-
-
   @else
-    OUT OF HERE!! Secure!!
-    @endif
+  @include('back.partials.secure') 
+    </div>
+  @endif
 
-@stop
+  @stop

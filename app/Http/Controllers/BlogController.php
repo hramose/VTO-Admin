@@ -46,6 +46,7 @@ class BlogController extends Controller {
 		$this->nbrPages = 2;
 
 		$this->middleware('redac', ['except' => ['indexFront', 'show', 'tag', 'search']]);
+			$this->middleware('redac', ['only' => ['updateSeen', 'updateActive']]);
 		$this->middleware('admin', ['only' => ['updateSeen', 'updateActive']]);
 		$this->middleware('ajax', ['only' => ['updateSeen', 'updateActive']]);
 	}	
@@ -87,7 +88,7 @@ class BlogController extends Controller {
 		$statut = $this->user_gestion->getStatut();
 		$posts = $this->blog_gestion->index(
 			10, 
-			$statut == 'admin' ? null : $request->user()->id,
+			$statut == 'admin' || 'redac' || 'user' ? null : $request->user()->id,
 			$request->name,
 			$request->sens
 		);

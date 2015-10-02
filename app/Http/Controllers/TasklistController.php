@@ -6,6 +6,7 @@ use App\Tasklist;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Request;
+use App\Jobs\ChangeLocale;
 
 class TasklistController extends Controller {
 

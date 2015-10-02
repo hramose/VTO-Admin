@@ -1,6 +1,7 @@
 @extends('back.template')
-
 @section('main')
+<!--permissions admin oder redac-->
+@if(session('statut') == 'admin' || session('statut') == 'redac' ||  session('statut') == 'user')
 
 	@include('back.partials.entete', ['title' => trans('back/admin.dashboard'), 'icone' => 'dashboard', 'fil' => trans('back/admin.dashboard')])
 
@@ -25,6 +26,9 @@
 </script>
 
 
-
+  @else
+  @include('back.partials.secure') 
+    </div>
+  @endif
 @stop
 

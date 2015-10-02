@@ -22,6 +22,8 @@ return [
 	'new-registers' => 'New users !',
 	'new-posts' => 'New posts !',
 	'new-comments' => 'New comments !',
-	'table-lang' => 'english'
+	'table-lang' => 'english',
+	'secure' => 'You are not authorized to view this resource! Please consult the Admin.'
+	
 
 ];
