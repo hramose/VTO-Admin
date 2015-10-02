@@ -113,7 +113,10 @@ color:white!important;
 
 ul.dropdown-menu li div.slimScrollDiv ul.menu li p a{   
 color: #ffffff !important;
+}
 
+ul.dropdown-menu li.user-body div.col-xs-12.text-center a{
+ color: #ffffff !important; 
 }
 
 
