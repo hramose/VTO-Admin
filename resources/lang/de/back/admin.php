@@ -23,5 +23,7 @@ return [
 	'new-posts' => 'Neue Beträge!',
 	'new-comments' => 'Neue Kommentare',	
 	'table-lang' => 'german',
-	'secure' => 'Du hast keine Berechtigung diesen Bereich einzusehen! Bitte wende dich an den Admin.'
+	'secure' => 'Du hast keine Berechtigung diesen Bereich einzusehen! Bitte wende dich an den Admin.',
+	'search' => 'Suche...'
+	
 ];

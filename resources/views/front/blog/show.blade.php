@@ -22,7 +22,7 @@
 				{!! $post->content !!}
 			
 				@if($post->tags->count())
-					<div class="text-center">
+					<div class="text-center textcontentbottom">
 						@if($post->tags->count() > 0)
 							<small>{{ trans('front/blog.tags') }}</small> 
 							@foreach($post->tags as $tag)
@@ -42,9 +42,11 @@
 					
 					<h3 class="text-center">{{ trans('front/blog.comments') }}</h3>
 				
-
+	
 					@if($comments->count())
 						@foreach($comments as $comment)
+					<div class="box box-primary">
+			
 							<div class="commentitem">
 								<h3>
 									<small>{{ $comment->user->username . ' ' . trans('front/blog.on') . ' ' . $comment->created_at }}</small>
@@ -53,12 +55,16 @@
 										<a id="comment{!! $comment->id !!}" href="#" class="editcomment"><span class="fa fa-fw fa-pencil pull-right" data-toggle="tooltip" data-placement="left" title="{{ trans('front/blog.edit') }}"></span></a>
 									@endif
 								</h3>
+
 								<div id="contenu{!! $comment->id !!}">{!! $comment->content !!}</div>
 								
-							</div>
+								
+							</div></div>
 						@endforeach
 					@endif	
 
+
+<br><br>
 					<div class="row" id="formcreate"> 
 						@if(session()->has('warning'))
 							@include('partials/error', ['type' => 'warning', 'message' => session('warning')])

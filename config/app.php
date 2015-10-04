@@ -150,6 +150,7 @@ return [
 		Acacha\AdminLTETemplateLaravel\app\Providers\AdminLTETemplateServiceProvider::class,
 		 Intervention\Image\ImageServiceProvider::class,
 		
+		
 	],
 
 	/*

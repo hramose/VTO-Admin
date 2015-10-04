@@ -23,7 +23,8 @@ return [
 	'new-posts' => 'New posts !',
 	'new-comments' => 'New comments !',
 	'table-lang' => 'english',
-	'secure' => 'You are not authorized to view this resource! Please consult the Admin.'
+	'secure' => 'You are not authorized to view this resource! Please consult the Admin.',
+	'search' => 'Search...'
 	
 
 ];

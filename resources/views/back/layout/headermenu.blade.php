@@ -31,7 +31,7 @@
                     <ul class="dropdown-menu">
                     
                         <li class="header">{{ isset($taskcountkey) ? $taskcountkey : 'taskcountkey Fehler!' }} {{ trans('back/tasklist.tasklist-comments') }}
-<?php  Session::regenerate(); ?>
+
                         
                         </li>
 
@@ -104,7 +104,7 @@
                   <!-- Menu Footer-->
                   <li class="user-footer">
                     <div class="pull-left">
-                      <a href="{!! url('user') !!}/{{ Auth::user()->role_id }}" class="btn btn-default btn-flat">{{trans('back/users.card')}}</a>
+                      <a data-toggle="control-sidebar" href="#control-sidebar-home-tab" id="sidebarprofil" class="btn btn-default btn-flat" id="userprofileclick">{{trans('back/users.card')}}</a>
                     </div>
                     <div class="pull-right">                  
 

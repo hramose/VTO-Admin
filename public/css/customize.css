@@ -116,10 +116,34 @@ color: #ffffff !important;
 }
 
 ul.dropdown-menu li.user-body div.col-xs-12.text-center a{
- color: #ffffff !important; 
+background-color: #222D32 !important; 
+color: #ffffff!important; 
 }
 
+/*Comments Front*/
+.commentitem{
+ background-color: #ffffff !important; 
+ padding-bottom: 25px;
+ padding-left: 10px;
+ padding-right: 10px;
+}
 
+.textcontentbottom{
+ padding-bottom: 5px;
+}
+
+.textcontent{
+
+ padding-bottom: 25px;
+ padding-left: 10px;
+ padding-right: 10px;
+}
+/*userbody back*/
+.user-body{
+background-color: #222D32 !important; 
+color: #ffffff!important; 
+
+}
 
 
 

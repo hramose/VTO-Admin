@@ -279,15 +279,31 @@
               <!-- Control Sidebar -->
               <aside class="control-sidebar control-sidebar-dark">
               <!-- Create the tabs -->
-              <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
-              <li><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
+              <ul class="nav nav-tabs nav-justified control-sidebar-tabs ">
+              <li class="active"><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-user "></i></a></li>
               <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
               </ul>
               <!-- Tab panes -->
               <div class="tab-content">
               <!-- Home tab content -->
-              <div class="tab-pane" id="control-sidebar-home-tab">
-              <h3 class="control-sidebar-heading"> {{ auth()->user()->username }} - ({{ trans('back/admin.users') }})</h3>
+              <div class="tab-pane active" id="control-sidebar-home-tab">
+              <h3 class="control-sidebar-heading"> {{ auth()->user()->username }} <br>
+@if(session('statut') == 'admin')
+{{trans('back/users.adminstatus')}}
+
+@elseif (session('statut') == 'redac')
+{{trans('back/users.redakstatus')}}
+
+@elseif (session('statut') == 'user')
+{{trans('back/users.userstatus')}}
+
+@elseif (session('statut') == 'guest')
+{{trans('back/users.gueststatus')}}
+@endif 
+<br>
+{{ auth()->user()->email }}
+
+              </h3>
               <ul class="control-sidebar-menu">
               <li>
               <a href="javascript::;">
@@ -330,5 +346,7 @@
               <script src="{{ asset('/plugins/fastclick/fastclick.min.js') }}"></script>
               <!-- AdminLTE App -->
               <script src="{{ asset('/js/app.min.js') }}"></script>
+              <!-- customize js -->
+              <script src="{{ asset('/js/customize.js') }}"></script>
             </body>
           </html>
