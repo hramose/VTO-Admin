@@ -7,7 +7,7 @@
 "{{{ $tasklist->info }}}",
 "<div style=\"text-align: center\"><a class=\"btn btn-primary btn-sm\" href=\" {{ URL::to('tasklist/'.$tasklist->id.'/edit') }}  \"><i class=\"fa fa-edit\"></i> {{$language= trans('back/tasklist.edit')}} </a></div> ",
 
-   "<div style=\"text-align: center\"><a  class=\"btn btn-danger btn-sm\" href=\"{{ action('TasklistController@delete', $tasklist->id) }}\"><i class=\"fa fa-remove\"></i> {{$language= trans('back/tasklist.destroy')}} </a></div>"
+   "<div style=\"text-align: center\"><a  class=\"btn btn-danger btn-sm\" onClick=\"return confirm('{{trans('back/tasklist.destroytask')}}')\" href=\"{{ action('TasklistController@delete', $tasklist->id) }}\"><i class=\"fa fa-remove\"></i> {{$language= trans('back/tasklist.destroy')}} </a></div>"
 @if ($index == -1)
 @elseif ($index+1 == count($tasklists))
   ] ]}
@@ -15,3 +15,4 @@
   ], 
 @endif
 @endforeach
+

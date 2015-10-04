@@ -10,7 +10,7 @@ return [
 	'seen' => 'Seen',
 	'see' => 'See',
 	'edit' => 'Edit',
-	'destroy' => 'Destroy',
+	'destroy' => 'Delete',
 	'destroy-warning' => 'Really destroy this user ?',
 	'fail' => 'Update fail.',
 	'creation' => 'Creation',

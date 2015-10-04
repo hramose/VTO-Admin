@@ -37,6 +37,7 @@
 <script type="text/javascript" src="{{ URL::asset('plugins/tableExport/jspdf/libs/sprintf.js') }}"></script>
 <script type="text/javascript" src="{{ URL::asset('plugins/tableExport/jspdf/jspdf.js') }}"></script>
 <script type="text/javascript" src="{{ URL::asset('plugins/tableExport/jspdf/libs/base64.js') }}"></script>
+
 <!--Footable TABLE SCRIPTS-->
 <link href="{{ URL::asset('plugins/FooTable-master/css/footable-0.1.css') }}" rel="stylesheet" type="text/css" />
 <link href="{{ URL::asset('plugins/FooTable-master/css/footable.sortable-0.1.css') }}" rel="stylesheet" type="text/css" />

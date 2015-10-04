@@ -19,7 +19,7 @@ return [
 	'no' => 'No',
 	'see' => 'See',
 	'edit' => 'Edit',
-	'destroy' => 'Destroy',
+	'destroy' => 'Delete',
 	'destroy-warning' => 'Really destroy this post ?',
 	'fail' => 'Update fail.',
 	'stored' => 'Post stored.',

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 01. Okt 2015 um 11:08
+-- Erstellungszeit: 04. Okt 2015 um 14:43
 -- Server-Version: 5.6.26
 -- PHP-Version: 5.6.12
 
@@ -69,7 +69,16 @@ CREATE TABLE IF NOT EXISTS `comments` (
   `seen` tinyint(1) NOT NULL DEFAULT '0',
   `user_id` int(10) unsigned NOT NULL,
   `post_id` int(10) unsigned NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Daten für Tabelle `comments`
+--
+
+INSERT INTO `comments` (`id`, `created_at`, `updated_at`, `content`, `seen`, `user_id`, `post_id`) VALUES
+(1, '2015-09-30 22:00:00', '2015-10-01 22:00:00', 'Das ist ja Wahnsinn. Danke!', 0, 62, 1),
+(2, '2015-10-01 22:00:00', '2015-10-07 22:00:00', 'Na voll irre. Fein sowas.', 0, 2, 2),
+(3, '2015-10-04 07:04:43', '2015-10-04 07:05:09', '<p>Ja warum auch nicht.</p>\r\n', 0, 5, 1);
 
 -- --------------------------------------------------------
 
@@ -170,7 +179,7 @@ CREATE TABLE IF NOT EXISTS `posts` (
   `seen` tinyint(1) NOT NULL DEFAULT '0',
   `active` tinyint(1) NOT NULL DEFAULT '0',
   `user_id` int(10) unsigned NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Daten für Tabelle `posts`
@@ -178,10 +187,12 @@ CREATE TABLE IF NOT EXISTS `posts` (
 
 INSERT INTO `posts` (`id`, `created_at`, `updated_at`, `title`, `slug`, `summary`, `content`, `seen`, `active`, `user_id`) VALUES
 (1, '2015-09-22 07:48:24', '2015-09-27 20:49:10', 'MOZART', 'post-1', '<p>MOZART! Das Musical - AKTION: Die ersten 200 gebuchten Tickets erhalten einen gratis Gutschein f&uuml;r ein Getr&auml;nk Ihrer Wahl! Ein Rock-Star zu Zeiten des Rokoko: MOZART! Das Musical aus der Feder des Erfolgsduos Michael Kunze und Sylvester Levay beleuchtet den Weltmusiker, die historischen Figur, eine Legende der klassischen Musik. Mozart wird hier als au&szlig;erordentlich begabter K&uuml;nstler gezeigt, der dennoch oder gerade deshalb mit den einfachen Herausforderungen des Lebens k&auml;mpft. MOZART! - ein Drama &uuml;ber das Erwachsenwerden - will eine zum Klischee gewordene historische Figur von Verkitschung und Verg&ouml;tterung befreien.</p>\r\n', '<p>MOZART! Das Musical - AKTION: Die ersten 200 gebuchten Tickets erhalten einen gratis Gutschein f&uuml;r ein Getr&auml;nk Ihrer Wahl! Ein Rock-Star zu Zeiten des Rokoko: MOZART! Das Musical aus der Feder des Erfolgsduos Michael Kunze und Sylvester Levay beleuchtet den Weltmusiker, die historischen Figur, eine Legende der klassischen Musik. Mozart wird hier als au&szlig;erordentlich begabter K&uuml;nstler gezeigt, der dennoch oder gerade deshalb mit den einfachen Herausforderungen des Lebens k&auml;mpft. MOZART! - ein Drama &uuml;ber das Erwachsenwerden - will eine zum Klischee gewordene historische Figur von Verkitschung und Verg&ouml;tterung befreien.</p>\r\n', 0, 1, 1),
-(2, '2015-09-22 07:48:24', '2015-09-27 20:52:05', 'Lipizzaner ', 'post-2', '<p>Lipizzaner - Spanische Hofreitschule Die Spanische Hofreitschule Wien... ...ist die &auml;lteste und letzte Reitschule der Welt, in der klassische Reitkunst in reiner Form gepflegt wird. Ihr Name leitet sich davon her, dass an diesem Institut bei seiner Gr&uuml;ndung im Jahre 1572 Pferde spanischer Herkunft verwendet wurden. Der Lipizzaner gilt als die &auml;lteste Kulturpferderasse Europas. Das Dorf Lipizza in dessen N&auml;he 1580 das einstige k. u. k. Hofgest&uuml;t gegr&uuml;ndet wurde, gab der Pferderasse den Namen. 1915 musste das Gest&uuml;t zur G&auml;nze evakuiert werden und fand eine vorl&auml;ufige Bleibe in Laxenburg bei Wien. 1920 erfolgte die &Uuml;bersiedlung der Lipizzaner in das Bundesgest&uuml;t Piber. Die Republik &Ouml;sterreich als Rechtsnachfolgerin der alten Donaumonarchie hatte die Kontinuit&auml;t f&uuml;r die Lipizzanerzucht &uuml;bernommen und mit der &Ouml;ffnung der Spanischen Hofreitschule Wien eine der bedeutendsten Kulturinstitutionen der &Ouml;ffentlichkeit zug&auml;nglich gemacht.</p>\r\n', '<p>Lipizzaner - Spanische Hofreitschule Die Spanische Hofreitschule Wien... ...ist die &auml;lteste und letzte Reitschule der Welt, in der klassische Reitkunst in reiner Form gepflegt wird. Ihr Name leitet sich davon her, dass an diesem Institut bei seiner Gr&uuml;ndung im Jahre 1572 Pferde spanischer Herkunft verwendet wurden. Der Lipizzaner gilt als die &auml;lteste Kulturpferderasse Europas. Das Dorf Lipizza in dessen N&auml;he 1580 das einstige k. u. k. Hofgest&uuml;t gegr&uuml;ndet wurde, gab der Pferderasse den Namen. 1915 musste das Gest&uuml;t zur G&auml;nze evakuiert werden und fand eine vorl&auml;ufige Bleibe in Laxenburg bei Wien. 1920 erfolgte die &Uuml;bersiedlung der Lipizzaner in das Bundesgest&uuml;t Piber. Die Republik &Ouml;sterreich als Rechtsnachfolgerin der alten Donaumonarchie hatte die Kontinuit&auml;t f&uuml;r die Lipizzanerzucht &uuml;bernommen und mit der &Ouml;ffnung der Spanischen Hofreitschule Wien eine der bedeutendsten Kulturinstitutionen der &Ouml;ffentlichkeit zug&auml;nglich gemacht.</p>\r\n', 0, 1, 2),
+(2, '2015-09-22 07:48:24', '2015-09-27 20:52:05', 'Lipizzaner ', 'post-2', '<p>Lipizzaner - Spanische Hofreitschule Die Spanische Hofreitschule Wien... ...ist die &auml;lteste und letzte Reitschule der Welt, in der klassische Reitkunst in reiner Form gepflegt wird. Ihr Name leitet sich davon her, dass an diesem Institut bei seiner Gr&uuml;ndung im Jahre 1572 Pferde spanischer Herkunft verwendet wurden. Der Lipizzaner gilt als die &auml;lteste Kulturpferderasse Europas. Das Dorf Lipizza in dessen N&auml;he 1580 das einstige k. u. k. Hofgest&uuml;t gegr&uuml;ndet wurde, gab der Pferderasse den Namen. 1915 musste das Gest&uuml;t zur G&auml;nze evakuiert werden und fand eine vorl&auml;ufige Bleibe in Laxenburg bei Wien. 1920 erfolgte die &Uuml;bersiedlung der Lipizzaner in das Bundesgest&uuml;t Piber. Die Republik &Ouml;sterreich als Rechtsnachfolgerin der alten Donaumonarchie hatte die Kontinuit&auml;t f&uuml;r die Lipizzanerzucht &uuml;bernommen und mit der &Ouml;ffnung der Spanischen Hofreitschule Wien eine der bedeutendsten Kulturinstitutionen der &Ouml;ffentlichkeit zug&auml;nglich gemacht.</p>\r\n', '<p>Lipizzaner - Spanische Hofreitschule Die Spanische Hofreitschule Wien... ...ist die &auml;lteste und letzte Reitschule der Welt, in der klassische Reitkunst in reiner Form gepflegt wird. Ihr Name leitet sich davon her, dass an diesem Institut bei seiner Gr&uuml;ndung im Jahre 1572 Pferde spanischer Herkunft verwendet wurden. Der Lipizzaner gilt als die &auml;lteste Kulturpferderasse Europas. Das Dorf Lipizza in dessen N&auml;he 1580 das einstige k. u. k. Hofgest&uuml;t gegr&uuml;ndet wurde, gab der Pferderasse den Namen. 1915 musste das Gest&uuml;t zur G&auml;nze evakuiert werden und fand eine vorl&auml;ufige Bleibe in Laxenburg bei Wien. 1920 erfolgte die &Uuml;bersiedlung der Lipizzaner in das Bundesgest&uuml;t Piber. Die Republik &Ouml;sterreich als Rechtsnachfolgerin der alten Donaumonarchie hatte die Kontinuit&auml;t f&uuml;r die Lipizzanerzucht &uuml;bernommen und mit der &Ouml;ffnung der Spanischen Hofreitschule Wien eine der bedeutendsten Kulturinstitutionen der &Ouml;ffentlichkeit zug&auml;nglich gemacht.</p>\r\n', 1, 1, 2),
 (3, '2015-09-22 07:48:24', '2015-09-29 16:26:33', 'Gepflegtes', 'post-3', '<p>Gepflegtes Brauchtum, zeitlose Tradition und eine angeborene Geselligkeit. Gelebt von fröhlichen Menschen mit einer kunterbunten Dialektvielfalt. Das ist Österreich. Und das ist das ´Wiener Wiesn-Fest´. Heimat eben.<br />\r\n<br />\r\nAls Österreichs größtes Brauchtums- und Volksmusikfest bieten wir alles, was unser Land so unvergleichlich macht: Brauchtum, Handwerk und herzhafte Schmankerl.<br />\r\n<br />\r\nBodenständige Volksmusik genauso wie eine einzigartige Partystimmung Abends bei den Live-Konzerten. Für Lederhose und Dirndl. Für Jung und Alt. In liebevoll dekorierten Zelten, gemütlichen Schanigärten, urigen Aldddmen und im stimmungsvollen Wiesndorf. Ohne Kitsch, dafür sehr ehrlich.<br />\r\n<br />\r\nFür Musik-Begeisterte warten auch heuer wieder zahlreiche musikalische Highlights mit tollen Künstlerinnen und Künstlern und einem breiten Angebot, bei dem für jeden etwas dabei und beste Stimmung garantiert ist. ´Die Münchener Freiheit´ spielt erstmals auf dem Wiener Wiesn-Fest und heizet mit ihren Hits ´Ohne dich (schlaf ich heut Nacht nicht ein)´ und ´Tausendmal du´ das Gösser-Zelt ein. Ebenfalls zum ersten Mal wird am Vorarlberg-Tag der ´Holstuonarmusigbigbandclub´ - kurz HMBC - auftreten und für einen außergewöhnlichen Abend sorgen. Ein weiterer musikalischer Höhepunkt ist der Auftritt von ´DJ Ötzi´ mit Band im Gösser-Zelt. Weiteres im Repertoire: die beliebten ´Edlseer´, die ganz nebenbei 20-jähriges Bühnenjubiläum feiern.</p>\r\n', '<p>Gepflegtes Brauchtum, zeitlose Tradition und eine angeborene Geselligkeit. Gelebt von fröhlichen Menschen mit einer kunterbunten Dialektvielfalt. Das ist Österreich. Und das ist das ´Wiener Wiesn-Fest´. Heimat eben.<br />\r\n<br />\r\nAls Österreichs größtes Brauchtums- und Volksmusikfest bieten wir alles, was unser Land so unvergleichlich macht: Brauchtum, Handwerk und herzhafte Schmankerl.<br />\r\n<br />\r\nBodenständige Volksmusik genauso wie eine einzigartige Partystimmung Abends bei den Live-Konzerten. Für Lederhose und Dirndl. Für Jung und Alt. In liebevoll dekorierten Zelten, gemütlichen Schanigärten, urigen Almen und im stimmungsvollen Wiesndorf. Ohne Kitsch, dafür sehr ehrlich.<br />\r\n<br />\r\nFür Musik-Begeisterte warten auch heuer wieder zahlreiche musikalische Highlights mit tollen Künstlerinnen und Künstlern und einem breiten Angebot, bei dem für jeden etwas dabei und beste Stimmung garantiert ist. ´Die Münchener Freiheit´ spielt erstmals auf dem Wiener Wiesn-Fest und heizet mit ihren Hits ´Ohne dich (schlaf ich heut Nacht nicht ein)´ und ´Tausendmal du´ das Gösser-Zelt ein. Ebenfalls zum ersten Mal wird am Vorarlberg-Tag der ´Holstuonarmusigbigbandclub´ - kurz HMBC - auftreten und für einen außergewöhnlichen Abend sorgen. Ein weiterer musikalischer Höhepunkt ist der Auftritt von ´DJ Ötzi´ mit Band im Gösser-Zelt. Weiteres im Repertoire: die beliebten ´Edlseer´, die ganz nebenbei 20-jähriges Bühnenjubiläum feiern.</p>\r\n', 0, 1, 2),
-(4, '2015-09-22 07:48:24', '2015-09-27 20:48:34', 'Muse', 'post-4', '<p>Muse<br />\r\n2016 in Wien!<br />\r\n<br />\r\nDie britische Rockband Muse gastiert am 9. Mai 2016 in der Wiener Stadthalle. Angek&uuml;ndigt ist eine atemberaubende B&uuml;hnenshow: Die Band spielt dabei auf einer 360 Grad B&uuml;hne inmitten der Konzerthalle, so die Veranstalter. Passend zu ihrem aktuellen Album Drones sollen sie w&auml;hrend der Show auch kleine Kameradrohnen in die Luft steigen lassen.</p>\r\n', '<p>Muse<br />\r\n2016 in Wien!<br />\r\n<br />\r\nDie britische Rockband Muse gastiert am 9. Mai 2016 in der Wiener Stadthalle. Angek&uuml;ndigt ist eine atemberaubende B&uuml;hnenshow: Die Band spielt dabei auf einer 360 Grad B&uuml;hne inmitten der Konzerthalle, so die Veranstalter. Passend zu ihrem aktuellen Album Drones sollen sie w&auml;hrend der Show auch kleine Kameradrohnen in die Luft steigen lassen.</p>\r\n', 0, 1, 2),
-(5, '2015-09-27 20:51:08', '2015-09-27 20:51:55', 'Wiener Wiesn Fest Programm 2015:', 'wienerwiesn', '<p>Gepflegtes Brauchtum, zeitlose Tradition und eine angeborene Geselligkeit. Gelebt von fr&ouml;hlichen Menschen mit einer kunterbunten Dialektvielfalt. Das ist &Ouml;sterreich. Und das ist das &acute;Wiener Wiesn-Fest&acute;. Heimat eben.<br />\r\n<br />\r\nAls &Ouml;sterreichs gr&ouml;&szlig;tes Brauchtums- und Volksmusikfest bieten wir alles, was unser Land so unvergleichlich macht: Brauchtum, Handwerk und herzhafte Schmankerl.<br />\r\n<br />\r\nBodenst&auml;ndige Volksmusik genauso wie eine einzigartige Partystimmung Abends bei den Live-Konzerten. F&uuml;r Lederhose und Dirndl. F&uuml;r Jung und Alt. In liebevoll dekorierten Zelten, gem&uuml;tlichen Schanig&auml;rten, urigen Almen und im stimmungsvollen Wiesndorf. Ohne Kitsch, daf&uuml;r sehr ehrlich.<br />\r\n<br />\r\nF&uuml;r Musik-Begeisterte warten auch heuer wieder zahlreiche musikalische Highlights mit tollen K&uuml;nstlerinnen und K&uuml;nstlern und einem breiten Angebot, bei dem f&uuml;r jeden etwas dabei und beste Stimmung garantiert ist. &acute;Die M&uuml;nchener Freiheit&acute; spielt erstmals auf dem Wiener Wiesn-Fest und heizet mit ihren Hits &acute;Ohne dich (schlaf ich heut Nacht nicht ein)&acute; und &acute;Tausendmal du&acute; das G&ouml;sser-Zelt ein. Ebenfalls zum ersten Mal wird am Vorarlberg-Tag der &acute;Holstuonarmusigbigbandclub&acute; - kurz HMBC - auftreten und f&uuml;r einen au&szlig;ergew&ouml;hnlichen Abend sorgen. Ein weiterer musikalischer H&ouml;hepunkt ist der Auftritt von &acute;DJ &Ouml;tzi&acute; mit Band im G&ouml;sser-Zelt. Weiteres im Repertoire: die beliebten &acute;Edlseer&acute;, die ganz nebenbei 20-j&auml;hriges B&uuml;hnenjubil&auml;um feiern.</p>\r\n', '<p>Gepflegtes Brauchtum, zeitlose Tradition und eine angeborene Geselligkeit. Gelebt von fr&ouml;hlichen Menschen mit einer kunterbunten Dialektvielfalt. Das ist &Ouml;sterreich. Und das ist das &acute;Wiener Wiesn-Fest&acute;. Heimat eben.<br />\r\n<br />\r\nAls &Ouml;sterreichs gr&ouml;&szlig;tes Brauchtums- und Volksmusikfest bieten wir alles, was unser Land so unvergleichlich macht: Brauchtum, Handwerk und herzhafte Schmankerl.<br />\r\n<br />\r\nBodenst&auml;ndige Volksmusik genauso wie eine einzigartige Partystimmung Abends bei den Live-Konzerten. F&uuml;r Lederhose und Dirndl. F&uuml;r Jung und Alt. In liebevoll dekorierten Zelten, gem&uuml;tlichen Schanig&auml;rten, urigen Almen und im stimmungsvollen Wiesndorf. Ohne Kitsch, daf&uuml;r sehr ehrlich.<br />\r\n<br />\r\nF&uuml;r Musik-Begeisterte warten auch heuer wieder zahlreiche musikalische Highlights mit tollen K&uuml;nstlerinnen und K&uuml;nstlern und einem breiten Angebot, bei dem f&uuml;r jeden etwas dabei und beste Stimmung garantiert ist. &acute;Die M&uuml;nchener Freiheit&acute; spielt erstmals auf dem Wiener Wiesn-Fest und heizet mit ihren Hits &acute;Ohne dich (schlaf ich heut Nacht nicht ein)&acute; und &acute;Tausendmal du&acute; das G&ouml;sser-Zelt ein. Ebenfalls zum ersten Mal wird am Vorarlberg-Tag der &acute;Holstuonarmusigbigbandclub&acute; - kurz HMBC - auftreten und f&uuml;r einen au&szlig;ergew&ouml;hnlichen Abend sorgen. Ein weiterer musikalischer H&ouml;hepunkt ist der Auftritt von &acute;DJ &Ouml;tzi&acute; mit Band im G&ouml;sser-Zelt. Weiteres im Repertoire: die beliebten &acute;Edlseer&acute;, die ganz nebenbei 20-j&auml;hriges B&uuml;hnenjubil&auml;um feiern.</p>\r\n', 0, 1, 5);
+(4, '2015-09-22 07:48:24', '2015-09-27 20:48:34', 'Muse', 'post-4', '<p>Muse<br />\r\n2016 in Wien!<br />\r\n<br />\r\nDie britische Rockband Muse gastiert am 9. Mai 2016 in der Wiener Stadthalle. Angek&uuml;ndigt ist eine atemberaubende B&uuml;hnenshow: Die Band spielt dabei auf einer 360 Grad B&uuml;hne inmitten der Konzerthalle, so die Veranstalter. Passend zu ihrem aktuellen Album Drones sollen sie w&auml;hrend der Show auch kleine Kameradrohnen in die Luft steigen lassen.</p>\r\n', '<p>Muse<br />\r\n2016 in Wien!<br />\r\n<br />\r\nDie britische Rockband Muse gastiert am 9. Mai 2016 in der Wiener Stadthalle. Angek&uuml;ndigt ist eine atemberaubende B&uuml;hnenshow: Die Band spielt dabei auf einer 360 Grad B&uuml;hne inmitten der Konzerthalle, so die Veranstalter. Passend zu ihrem aktuellen Album Drones sollen sie w&auml;hrend der Show auch kleine Kameradrohnen in die Luft steigen lassen.</p>\r\n', 0, 0, 2),
+(5, '2015-09-27 20:51:08', '2015-09-27 20:51:55', 'Wiener Wiesn Fest Programm 2015:', 'wienerwiesn', '<p>Gepflegtes Brauchtum, zeitlose Tradition und eine angeborene Geselligkeit. Gelebt von fr&ouml;hlichen Menschen mit einer kunterbunten Dialektvielfalt. Das ist &Ouml;sterreich. Und das ist das &acute;Wiener Wiesn-Fest&acute;. Heimat eben.<br />\r\n<br />\r\nAls &Ouml;sterreichs gr&ouml;&szlig;tes Brauchtums- und Volksmusikfest bieten wir alles, was unser Land so unvergleichlich macht: Brauchtum, Handwerk und herzhafte Schmankerl.<br />\r\n<br />\r\nBodenst&auml;ndige Volksmusik genauso wie eine einzigartige Partystimmung Abends bei den Live-Konzerten. F&uuml;r Lederhose und Dirndl. F&uuml;r Jung und Alt. In liebevoll dekorierten Zelten, gem&uuml;tlichen Schanig&auml;rten, urigen Almen und im stimmungsvollen Wiesndorf. Ohne Kitsch, daf&uuml;r sehr ehrlich.<br />\r\n<br />\r\nF&uuml;r Musik-Begeisterte warten auch heuer wieder zahlreiche musikalische Highlights mit tollen K&uuml;nstlerinnen und K&uuml;nstlern und einem breiten Angebot, bei dem f&uuml;r jeden etwas dabei und beste Stimmung garantiert ist. &acute;Die M&uuml;nchener Freiheit&acute; spielt erstmals auf dem Wiener Wiesn-Fest und heizet mit ihren Hits &acute;Ohne dich (schlaf ich heut Nacht nicht ein)&acute; und &acute;Tausendmal du&acute; das G&ouml;sser-Zelt ein. Ebenfalls zum ersten Mal wird am Vorarlberg-Tag der &acute;Holstuonarmusigbigbandclub&acute; - kurz HMBC - auftreten und f&uuml;r einen au&szlig;ergew&ouml;hnlichen Abend sorgen. Ein weiterer musikalischer H&ouml;hepunkt ist der Auftritt von &acute;DJ &Ouml;tzi&acute; mit Band im G&ouml;sser-Zelt. Weiteres im Repertoire: die beliebten &acute;Edlseer&acute;, die ganz nebenbei 20-j&auml;hriges B&uuml;hnenjubil&auml;um feiern.</p>\r\n', '<p>Gepflegtes Brauchtum, zeitlose Tradition und eine angeborene Geselligkeit. Gelebt von fr&ouml;hlichen Menschen mit einer kunterbunten Dialektvielfalt. Das ist &Ouml;sterreich. Und das ist das &acute;Wiener Wiesn-Fest&acute;. Heimat eben.<br />\r\n<br />\r\nAls &Ouml;sterreichs gr&ouml;&szlig;tes Brauchtums- und Volksmusikfest bieten wir alles, was unser Land so unvergleichlich macht: Brauchtum, Handwerk und herzhafte Schmankerl.<br />\r\n<br />\r\nBodenst&auml;ndige Volksmusik genauso wie eine einzigartige Partystimmung Abends bei den Live-Konzerten. F&uuml;r Lederhose und Dirndl. F&uuml;r Jung und Alt. In liebevoll dekorierten Zelten, gem&uuml;tlichen Schanig&auml;rten, urigen Almen und im stimmungsvollen Wiesndorf. Ohne Kitsch, daf&uuml;r sehr ehrlich.<br />\r\n<br />\r\nF&uuml;r Musik-Begeisterte warten auch heuer wieder zahlreiche musikalische Highlights mit tollen K&uuml;nstlerinnen und K&uuml;nstlern und einem breiten Angebot, bei dem f&uuml;r jeden etwas dabei und beste Stimmung garantiert ist. &acute;Die M&uuml;nchener Freiheit&acute; spielt erstmals auf dem Wiener Wiesn-Fest und heizet mit ihren Hits &acute;Ohne dich (schlaf ich heut Nacht nicht ein)&acute; und &acute;Tausendmal du&acute; das G&ouml;sser-Zelt ein. Ebenfalls zum ersten Mal wird am Vorarlberg-Tag der &acute;Holstuonarmusigbigbandclub&acute; - kurz HMBC - auftreten und f&uuml;r einen au&szlig;ergew&ouml;hnlichen Abend sorgen. Ein weiterer musikalischer H&ouml;hepunkt ist der Auftritt von &acute;DJ &Ouml;tzi&acute; mit Band im G&ouml;sser-Zelt. Weiteres im Repertoire: die beliebten &acute;Edlseer&acute;, die ganz nebenbei 20-j&auml;hriges B&uuml;hnenjubil&auml;um feiern.</p>\r\n', 0, 0, 64),
+(7, '2015-10-02 11:27:07', '2015-10-02 11:27:07', 'adsf', 'dsfa', '<p>asdf</p>\r\n', '<p>adsf</p>\r\n', 0, 0, 64),
+(8, '2015-10-03 16:56:57', '2015-10-03 16:56:57', 'fddf', 'dfdf', '<p>dffdfd</p>\r\n', '<p>dffdfdfdfd</p>\r\n', 0, 0, 64);
 
 -- --------------------------------------------------------
 
@@ -193,7 +204,7 @@ CREATE TABLE IF NOT EXISTS `post_tag` (
   `id` int(10) unsigned NOT NULL,
   `post_id` int(10) unsigned NOT NULL,
   `tag_id` int(10) unsigned NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Daten für Tabelle `post_tag`
@@ -207,7 +218,9 @@ INSERT INTO `post_tag` (`id`, `post_id`, `tag_id`) VALUES
 (5, 2, 3),
 (6, 3, 1),
 (7, 3, 2),
-(8, 3, 4);
+(8, 3, 4),
+(10, 7, 8),
+(11, 8, 9);
 
 -- --------------------------------------------------------
 
@@ -244,7 +257,7 @@ CREATE TABLE IF NOT EXISTS `tags` (
   `created_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `tag` varchar(50) COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Daten für Tabelle `tags`
@@ -256,7 +269,10 @@ INSERT INTO `tags` (`id`, `created_at`, `updated_at`, `tag`) VALUES
 (3, '2015-09-22 07:48:24', '2015-09-22 07:48:24', 'Tag3'),
 (4, '2015-09-22 07:48:24', '2015-09-22 07:48:24', 'Tag4'),
 (5, '2015-09-29 16:27:39', '2015-09-29 16:27:39', 'asdfasdf'),
-(6, '2015-09-30 19:17:35', '2015-09-30 19:17:35', 'd');
+(6, '2015-09-30 19:17:35', '2015-09-30 19:17:35', 'd'),
+(7, '2015-10-02 11:26:45', '2015-10-02 11:26:45', 'sadf'),
+(8, '2015-10-02 11:27:07', '2015-10-02 11:27:07', 'asdf'),
+(9, '2015-10-03 16:56:57', '2015-10-03 16:56:57', 'dfdf');
 
 -- --------------------------------------------------------
 
@@ -271,24 +287,22 @@ CREATE TABLE IF NOT EXISTS `tasklist` (
   `remember_token` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
   `created_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
-) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Daten für Tabelle `tasklist`
 --
 
 INSERT INTO `tasklist` (`id`, `headline`, `info`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'Entwicklung der Console.', 'Weniger dringend', NULL, '0000-00-00 00:00:00', '2015-09-23 21:38:22'),
-(2, 'Umstellung Stylesheets.', 'Dringend', NULL, '0000-00-00 00:00:00', '2015-09-24 01:28:16'),
-(3, 'New Layout Customerd', 'Weniger dringend', NULL, '2015-09-23 21:12:17', '2015-09-24 00:59:17'),
 (9, 'Arbeit ', 'Nicht wichtig', NULL, '2015-09-24 01:36:09', '2015-09-28 14:13:18'),
-(10, 'sadfas', 'Dringend', NULL, '2015-09-24 01:44:23', '2015-09-24 01:44:23'),
-(11, 'asdf', 'Nicht wichtig', NULL, '2015-09-24 01:44:27', '2015-09-25 11:25:16'),
-(13, 'rzterzt', 'Sehr dringend', NULL, '2015-09-24 01:44:34', '2015-09-24 01:44:34'),
-(17, 'ooo', 'Sehr dringend', NULL, '2015-09-24 04:50:16', '2015-09-24 04:50:16'),
-(18, 'dsafasdf', 'Sehr dringend', NULL, '2015-09-24 04:52:48', '2015-09-24 04:52:48'),
-(23, 'fdagdfsg', 'Sehr dringend', NULL, '2015-09-24 04:57:38', '2015-09-24 04:57:38'),
-(24, 'dfdf', 'Sehr dringend', NULL, '2015-09-29 21:17:39', '2015-09-29 21:17:39');
+(11, 'Routing', 'Nicht wichtig', NULL, '2015-09-24 01:44:27', '2015-10-01 21:39:07'),
+(17, 'Error Meldungen', 'Sehr dringend', NULL, '2015-09-24 04:50:16', '2015-10-01 21:38:53'),
+(18, 'Header Webfront', 'Sehr dringend', NULL, '2015-09-24 04:52:48', '2015-10-01 21:38:41'),
+(23, 'Jquery ', 'Sehr dringend', NULL, '2015-09-24 04:57:38', '2015-10-01 21:38:14'),
+(24, 'Layout', 'Erledigt', NULL, '2015-09-29 21:17:39', '2015-10-01 21:38:23'),
+(27, 'Domains', 'Sehr dringend', NULL, '2015-10-01 21:39:22', '2015-10-01 21:39:22'),
+(28, 'Multitask', 'Sehr dringend', NULL, '2015-10-01 21:39:39', '2015-10-01 21:39:39'),
+(29, 'White and Black Design', 'Sehr dringend', NULL, '2015-10-01 21:39:55', '2015-10-01 21:39:55');
 
 -- --------------------------------------------------------
 
@@ -320,11 +334,11 @@ CREATE TABLE IF NOT EXISTS `users` (
 
 INSERT INTO `users` (`id`, `username`, `email`, `password`, `role_id`, `seen`, `valid`, `confirmed`, `confirmation_code`, `created_at`, `updated_at`, `remember_token`, `imagepath`, `imagefilename`, `imagex`) VALUES
 (1, 'GreatAdmin', 'admin@la.fr', '$2y$10$sQi6IOC8dc/fqt2rLvF1a.Ri6GHDPJycZGfkRq54MgaCT00jnLPZW', 1, 1, 1, 1, NULL, '2015-09-22 07:48:24', '2015-09-30 19:43:49', '3lSmLT2XL1E8Zns6Y6IYuJ0SygTHbnrPmBsYUBdoBYgZJrqdBqdz73uYbhu8', '/filemanager/userfiles/users', 'user8-128x128.jpg', ''),
-(2, 'Mike Redatkteurowitsch', 'redac@la.fr', '$2y$10$D9Hyi68hpybBxrrqk4RVce7glgmFdgngtnxPeJw6LrhuF5rh0tv9S', 2, 1, 1, 0, NULL, '2015-09-22 07:48:24', '2015-09-30 19:44:23', 'qcXcsDThCUfDBkvRrOqyAmTFHc3VVthSRXCiUCjUhZT9FzAv2N5QQK1gaK6P', '/filemanager/userfiles/users', 'avatar5.png', ''),
-(5, 'Bernd Obendorfer', 'bernd.obendorfer@chello.at', '$2y$10$EMxBcsYnvFNvJ./QI6a.Z.H.cyMdEatT8Y1p4XgFbCTWLxVaqNXTO', 1, 1, 1, 1, NULL, '2015-09-27 19:55:30', '2015-09-30 20:27:30', '7XTP3hfmCPe125KcjykY6hJc6ZsQLNnXp5VfX8wGcGwDxvUZeFw3DpAQvKG4', '/filemanager/userfiles/users', 'user2-160x160.jpg', ''),
-(62, 'Maria Userwitz', 'user@user.at', '$2y$10$2i5g.fi2FH3wbaQfYqEB3eZ6a.nhQZ0XKOC4qMTup99M3RN4esJ7G', 3, 1, 1, 1, NULL, '2015-09-30 19:20:48', '2015-09-30 20:25:16', 'NEjoshPh55nieFtmHJXVsOoAiknBXBm1eDDNiGD3qwduI0PE35O6WwkR2N9D', '/filemanager/userfiles/users', 'user4-128x128.jpg', ''),
-(63, 'Heiz Gastowitsch', 'gast@gast.at', '$2y$10$1q0a3V99Ndd7zGn0X6YUwuRijSWovAm.0p364CturT.02YDoLYUi6', 4, 1, 1, 1, NULL, '2015-09-30 19:21:35', '2015-09-30 20:20:23', 'XatXqjSDcPHl6tipGsDSMGglMJsqN244LwkQyKNQ14c61FtKXWr2JbkDuaGy', '/filemanager/userfiles/users', 'user1-128x128.jpg', ''),
-(64, 'Walter Redatkteurowitsch', 'redakteur@redakteur.at', '$2y$10$gSRKJRKHw3mfSN8eMgOQh.glFpBgBpUySv/cIZMAfvqluyc0N1VDG', 2, 1, 1, 1, NULL, '2015-09-30 19:24:09', '2015-09-30 20:59:19', 'jZKVveyyPNiYKJtpO3mswa0blk4HOYikI3VWph7L7S9uhjYM9VRs66EjFQ6G', '/filemanager/userfiles/users', 'user6-128x128.jpg', '');
+(2, 'Mike Redatkteur', 'redac@la.fr', '$2y$10$D9Hyi68hpybBxrrqk4RVce7glgmFdgngtnxPeJw6LrhuF5rh0tv9S', 2, 1, 1, 1, NULL, '2015-09-22 07:48:24', '2015-10-01 21:34:05', 'qcXcsDThCUfDBkvRrOqyAmTFHc3VVthSRXCiUCjUhZT9FzAv2N5QQK1gaK6P', '/filemanager/userfiles/users', 'avatar5.png', ''),
+(5, 'Bernd Obendorfer', 'bernd.obendorfer@chello.at', '$2y$10$EMxBcsYnvFNvJ./QI6a.Z.H.cyMdEatT8Y1p4XgFbCTWLxVaqNXTO', 1, 1, 1, 1, NULL, '2015-09-27 19:55:30', '2015-10-04 07:32:59', 'AWhQcBJiZPYJK0xnWdyLy5y9y5E5yUX7Qs2Avh7Mka0vq67IXCJVf0fRPQS8', '/filemanager/userfiles/users', 'user2-160x160.jpg', ''),
+(62, 'Maria Userwitz', 'user@user.at', '$2y$10$2i5g.fi2FH3wbaQfYqEB3eZ6a.nhQZ0XKOC4qMTup99M3RN4esJ7G', 3, 1, 1, 1, NULL, '2015-09-30 19:20:48', '2015-10-03 16:57:38', '8tScDlwT9yWPa3wzFPCi4teqzdxav9P7gvcgcsnWn4bTZ85kOkf5tRwJ9Vtz', '/filemanager/userfiles/users', 'user5-128x128.jpg', ''),
+(63, 'Heiz Gastowitsch', 'gast@gast.at', '$2y$10$1q0a3V99Ndd7zGn0X6YUwuRijSWovAm.0p364CturT.02YDoLYUi6', 4, 1, 1, 1, NULL, '2015-09-30 19:21:35', '2015-10-02 09:57:26', '3oI2735GlLW20q2xsXQWqEO2qUmt4OSdzqnJv76sqsy4XgQnPG6d0DbQoYgw', '/filemanager/userfiles/users', 'user1-128x128.jpg', ''),
+(64, 'Walter Redatkteurowitsch', 'redakteur@redakteur.at', '$2y$10$gSRKJRKHw3mfSN8eMgOQh.glFpBgBpUySv/cIZMAfvqluyc0N1VDG', 2, 1, 1, 1, NULL, '2015-09-30 19:24:09', '2015-10-03 16:57:17', 'ncP2KJ8DfjVwWJuTXSMFDwTxXPCH7dK7aq0OWrWXHeW0lQhSICyTbk8Z88M3', '/filemanager/userfiles/users', 'user6-128x128.jpg', '');
 
 -- --------------------------------------------------------
 
@@ -456,7 +470,7 @@ ALTER TABLE `categories`
 -- AUTO_INCREMENT für Tabelle `comments`
 --
 ALTER TABLE `comments`
-  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT für Tabelle `contacts`
 --
@@ -471,12 +485,12 @@ ALTER TABLE `options`
 -- AUTO_INCREMENT für Tabelle `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
+  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT für Tabelle `post_tag`
 --
 ALTER TABLE `post_tag`
-  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;
+  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=12;
 --
 -- AUTO_INCREMENT für Tabelle `roles`
 --
@@ -486,12 +500,12 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT für Tabelle `tags`
 --
 ALTER TABLE `tags`
-  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
+  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT für Tabelle `tasklist`
 --
 ALTER TABLE `tasklist`
-  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=25;
+  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=30;
 --
 -- AUTO_INCREMENT für Tabelle `users`
 --

@@ -2,11 +2,10 @@
 
 return [
 	'edit' => 'Edit',
-	'destroy' => 'Destroy',	
+	'destroy' => 'Delete',	
 	'export' => 'Export to..',
 	'headline' => 'Headline',
 	'info' => 'Information',
-
 	'tasklist' => 'Neue Tasks',
 	'tasklistakt' => 'Update task',
 	'tasklist-comments' => 'Tasks',
@@ -15,6 +14,9 @@ return [
 	'tasklist-add' => 'Add Task ',
 	'tasklist-edit' => 'Edit Task ',
 	'tasklist-take' => 'Save Record ',	
-	'tasklist-addadd' => 'creation'
+	'tasklist-addadd' => 'creation',
+	'destroytask' => 'Delete task?'
+
+	
 
 ];

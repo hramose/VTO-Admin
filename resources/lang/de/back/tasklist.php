@@ -15,5 +15,7 @@ return [
 	'tasklist-edit' => 'Aufgabe bearbeiten ',
 	'tasklist-take' => 'Aufgabe aktualisieren',
 	'tasklist-addadd' => 'Erstellung',
+	'destroytask' => 'Aufgabe löschen?'
+	
 
 ];

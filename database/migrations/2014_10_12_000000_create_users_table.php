@@ -24,7 +24,11 @@ class CreateUsersTable extends Migration {
 			$table->boolean('confirmed')->default(false);
 			$table->string('confirmation_code')->nullable();
 			$table->timestamps();
-			$table->rememberToken();			
+			$table->rememberToken();
+			$table->text('imagepath', 255);			
+			$table->string('imagefilename', 255);	
+			$table->binary('imagex', 255);	
+			
 		});
 	}
 
