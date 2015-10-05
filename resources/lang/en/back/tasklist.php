@@ -13,9 +13,14 @@ return [
 	'tasklistname' => 'Tasklist',
 	'tasklist-add' => 'Add Task ',
 	'tasklist-edit' => 'Edit Task ',
-	'tasklist-take' => 'Save Record ',	
+	'tasklist-take' => 'Update task',	
 	'tasklist-addadd' => 'creation',
-	'destroytask' => 'Delete task?'
+	'destroytask' => 'Delete task?',
+	'tasklist-taken' => 'Task has been updated',
+	'tasklist-added' => 'Task has been added',
+	'tasklist-delete' => 'Task deleted'
+	
+
 
 	
 
