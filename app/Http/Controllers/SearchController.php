@@ -6,6 +6,7 @@ use App\Http\Requests\PostRequest;
 use App\Http\Requests\SearchRequest;
 use App\Repositories\BlogRepository;
 use App\Repositories\UserRepository;
+use App\Tasklist;
 
 class SearchController extends Controller {
 
@@ -39,10 +40,15 @@ class SearchController extends Controller {
 	*/
 	public function __construct(
 		BlogRepository $blog_gestion,
-		UserRepository $user_gestion)
+		UserRepository $user_gestion,
+		Tasklist $tasklist_gestion
+
+		)
 	{
 		$this->user_gestion = $user_gestion;
 		$this->blog_gestion = $blog_gestion;
+		$this->tasklist_gestion = $tasklist_gestion;
+
 		$this->nbrPages = 2;
 
 
@@ -62,8 +68,14 @@ class SearchController extends Controller {
 		$posts = $this->blog_gestion->search($this->nbrPages, $search);
 		$links = $posts->setPath('')->appends(compact('search'))->render();
 		$info = trans('front/blog.info-search') . '<strong>' . $search . '</strong>';
+		 $tasks = $this->tasklist_gestion->where('headline', '=', '%$search%')->get();
+		  $tasks = $this->tasklist_gestion
+                  ->where('tasklist.headline', 'LIKE', "%$search%")
+                  ->orWhere('tasklist.info', 'LIKE', "%$search%")
+                  ->get();
+	
 		
-		return view('back.search.index', compact('posts', 'links', 'info'));
+		return view('back.search.index', compact('posts', 'links', 'info' , 'tasks'));
 	}
 
 }

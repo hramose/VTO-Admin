@@ -89,18 +89,11 @@
                       </div>
                     </div>
                     <!-- search form -->
-                      {!! Form::open(['url' => 'search', 'method' => 'get', 'role' => 'form', 'class' => 'sidebar-form']) !!}  
-                      <div class="input-group">
-                {!! Form::control('text', 12, 'search', $errors, null, null, null, trans('back/admin.search')) !!}
-
-                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i></button>
-                  <span class="input-group-btn">
-
-                     
-
-            {!! Form::close() !!}
-               </span>
-               </div>
+                      {!! Form::open(['url' => 'search', 'method' => 'get', 'role' => 'form', 'class' => 'sidebar-form']) !!}                 
+                      {!! Form::control('text', 12, 'search', $errors, null, null, null, trans('back/admin.search')) !!}                     
+                      {!! Form::close() !!}
+                    <!-- search form END-->
+                    <!--
                     <form action="search" method="get" class="sidebar-form">
                       <div class="input-group">
                         <input type="text" name="search" class="form-control" placeholder="{{ trans('back/admin.search') }}">
@@ -108,7 +101,7 @@
                         <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i></button>
                         </span>
                       </div>
-                    </form>
+                    </form>-->
                     <!-- /.search form -->
                     <!-- sidebar menu: : style can be found in sidebar.less -->
 

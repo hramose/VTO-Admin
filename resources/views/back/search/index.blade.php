@@ -7,7 +7,9 @@
     <div class="row">
 
         @foreach($posts as $post)
-
+         <div class="col-lg-12 text-left">
+<h2>{{ trans('back/blog.dashboard') }}</h2>
+ </div>
                 <div class="col-lg-12 text-center">
                 <div class="box box-primary textcontent">
                     <h2>{{ $post->title }}                   
@@ -24,6 +26,37 @@
           </div>
         @endforeach
      
+
+
+
+
+ @foreach($tasks as $task)
+   <div class="col-lg-12 text-left">
+<h2>{{ trans('back/tasklist.tasklist-comments') }}</h2>
+ </div>
+                <div class="col-lg-12 text-center">
+                <div class="box box-primary textcontent">
+     <h2>{{ $task->headline }}                   
+                   
+                    </h2>
+               
+            
+                    <p>{!! $task->info !!}</p>
+                </div> 
+                <div class="col-lg-12 text-center ">
+                   
+                    <hr>
+                </div>
+          </div>
+
+        @endforeach
+
+
+
+
+
+
+
         <div class="col-lg-12 text-center">
             {!! $links !!}
         </div>

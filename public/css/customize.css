@@ -142,6 +142,19 @@ color: #ffffff!important;
 .user-body{
 background-color: #222D32 !important; 
 color: #ffffff!important; 
+}
+/*Serach back*/
+.sidebar-form{
+margin-left: -0px!important; 
+ overflow: hidden!important; 
+width: 100%;
+height: 40px;
+border: 0px solid blue!important;    
+}
+
+form.sidebar-form{
+background-color: transparent!important; 
+color: #ffffff!important; 
 
 }
 
